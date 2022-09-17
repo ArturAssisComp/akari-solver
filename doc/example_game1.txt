@@ -1,0 +1,11 @@
+# Example 1
+7x7
+W  W W B2 W  W  W
+W  W B W  W  W  W
+W  W W B2 W  B2 W
+B2 W B W  B1 W  B1
+W  B W B3 W  W  W
+W  W W W  B  W  W
+W  W W B1 W  W  W
+
+
