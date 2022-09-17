@@ -1,0 +1,31 @@
+version: 1
+formatters:
+        basic:
+                format:  '[%(asctime)s] [%(levelname)8s] %(filename)s/%(funcName)s - %(message)s'
+                datefmt: '%Y-%m-%d %H:%M:%S'
+        debug:
+                format: '***%(levelname)s*** [Filename: "%(filename)s"; Function:"%(funcName)s"; Line: %(lineno)d] --> %(message)s'
+
+
+
+handlers:
+        basic_handler:
+                class: logging.StreamHandler
+                level: INFO
+                formatter: basic
+                stream: ext://sys.stdout
+        debugger_handler:
+                class: logging.StreamHandler
+                level: DEBUG
+                formatter: debug 
+                stream: ext://sys.stdout
+loggers:
+        debugger:
+                level: DEBUG
+                handlers: [debugger_handler]
+                propagate: no
+        basic_logger:
+                level: INFO
+                handlers: [basic_handler]
+
+
