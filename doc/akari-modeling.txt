@@ -23,3 +23,4 @@ OBS:
     > <number> is in {0, 1, 2, 3, 4};
     > White spaces are ignored;
     > The parser is not case sensitive;
+    > Comments are accepted only if # is the first char of the line.
