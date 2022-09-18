@@ -11,6 +11,7 @@ class AkariSolver(object):
 
     def read_board_from_file(self, filename):
         self.current_board = {'board_matrix':None, 'num_cols':None, 'num_rows':None, 'solutions':[]} 
+        basic_logger.info(f'Reading board from:{filename}')
         with open(filename, 'r') as f:
             # Read number of rows and columns:
             for line in f:
@@ -34,6 +35,12 @@ class AkariSolver(object):
             for empty_line in f:
                 if len(empty_line.strip()) > 0: 
                     raise ValueError(f"The last lines must be empty. Invalid line: {empty_line.strip()}")
+        basic_logger.info('Board successfully read')
+        board_content = []
+        for line in self.current_board['board_matrix']:
+            board_content.append(str(line))
+        board_str = '\n'.join(board_content)
+        basic_logger.info(f'Board content: \n{board_str}')
 
     def solve(self):
         if self.current_board is None:
