@@ -1,0 +1,7 @@
+# Example 0
+4x3
+B1 B1 W
+W  W  W
+W  W  W
+W  W  B1
+

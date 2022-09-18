@@ -1,0 +1,26 @@
+# Modeling board:
+The board will be modeled as a matrix (NxM) with either white cells and black cells 
+    - White Cells:
+        - With light:    WL
+        - Without light: W
+    - Black Cells:
+        - With number:    B<number>
+        - Without number: B
+
+The board will be read from a file/string in the following format:
+
+# Comment lines (ignored)
+NxM\n
+cell00     cell01     cell02 ...     cell0(M-1)\n
+cell10     cell11     cell12 ...     cell1(M-1)\n
+...           ...                        ...
+cell(N-1)0 cell(N-1)1 cell(N-1)2 ... cell(N-1)(M-1)\n
+<EOF>
+
+
+OBS:
+    > Each cellij will be in {WL, W, B<number>, B};
+    > <number> is in {0, 1, 2, 3, 4};
+    > White spaces are ignored;
+    > The parser is not case sensitive;
+    > Comments are accepted only if # is the first char of the line.
